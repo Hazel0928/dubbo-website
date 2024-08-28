@@ -6,31 +6,25 @@ description: 在发起 Dubbo 调用之前指定本次调用的目标 IP
 linkTitle: 运行时动态指定 IP 调用
 title: 动态指定 IP 调用
 type: docs
-weight: 5
+weight: 4
 ---
 
 
-
-
-
 ## 特性说明
-使用 Dubbo 的扩展，实现指定 IP 调用。
 
-## 使用场景
-
-发起请求的时候需要指定本次调用的服务端，如消息回调、流量隔离等。
+在发起 RPC 请求的时候，需要指定本次调用的服务端，常用的场景包括消息回调、流量隔离等。
 
 ## 使用方式
 
 ### 插件依赖
 
-适配 Dubbo 3 版本
+首先，需要添加以下插件依赖到项目中
 
 ```xml
 <dependency>
   <groupId>org.apache.dubbo.extensions</groupId>
   <artifactId>dubbo-cluster-specify-address-dubbo3</artifactId>
-  <version>1.0.0</version>
+  <version>3.3.0</version>
 </dependency>
 ```
 
